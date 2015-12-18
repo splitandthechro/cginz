@@ -1,0 +1,2 @@
+C:/Users/Splitty/Documents/GitHub/cginz/bin/CMakeFiles/cginz.dir
+C:/Users/Splitty/Documents/GitHub/cginz/bin/CMakeFiles/cginz_test.dir

@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Splitty/Documents/GitHub/cginz/main.c
+ng_forward.h
+C:/Users/Splitty/Documents/GitHub/cginz/ng_forward.h
+
+C:/Users/Splitty/Documents/GitHub/cginz/ng_error.c
+
+C:/Users/Splitty/Documents/GitHub/cginz/ng_error.h
+ng_forward.h
+C:/Users/Splitty/Documents/GitHub/cginz/ng_forward.h
+
+C:/Users/Splitty/Documents/GitHub/cginz/ng_forward.h
+stdio.h
+-
+string.h
+-
+GL/gl.h
+-
+GL/freeglut.h
+-
+pthread.h
+-
+ng_error.h
+C:/Users/Splitty/Documents/GitHub/cginz/ng_error.h
+ng_game.h
+C:/Users/Splitty/Documents/GitHub/cginz/ng_game.h
+
+C:/Users/Splitty/Documents/GitHub/cginz/ng_game.c
+ng_game.h
+C:/Users/Splitty/Documents/GitHub/cginz/ng_game.h
+
+C:/Users/Splitty/Documents/GitHub/cginz/ng_game.h
+ng_forward.h
+C:/Users/Splitty/Documents/GitHub/cginz/ng_forward.h
+
