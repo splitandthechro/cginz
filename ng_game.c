@@ -1,21 +1,8 @@
 #include "ng_game.h"
 
-static struct ng_game_state *ng_state;
-static struct ng_list *ng_actions_update;
-static struct ng_list *ng_actions_draw;
-
-static void * ng_game_run_thread(void *);
-static void ng_game_update ();
-static void ng_game_update_node (struct ng_list_node *);
-static void ng_game_draw ();
-static void ng_game_draw_node (struct ng_list_node *);
-static void ng_game_add_update_hook (void (*) (void *));
-static void ng_game_add_draw_hook (void (*) (void *));
-
-struct ng_game_state *
-ng_game_create_state (struct ng_game_configuration config) {
+GameState *ng_game_create_state (GameConfiguration config) {
   ng_info ("Creating game configuration");
-  ng_state = malloc (sizeof (struct ng_game_state));
+  ng_state = malloc (sizeof (GameState));
   ng_state->config = config;
   ng_state->run = &ng_game_run;
   ng_state->loop = &ng_game_loop;
@@ -24,25 +11,23 @@ ng_game_create_state (struct ng_game_configuration config) {
   return ng_state;
 }
 
-void
-ng_game_run () {
+void ng_game_run () {
   ng_info ("Creating action lists for drawing and updating");
   ng_actions_update = ng_list_new ();
   ng_actions_draw = ng_list_new ();
+  ng_info ("Creating main game thread using pthread");
   if (pthread_create (&ng_state->thread, NULL, ng_game_run_thread, NULL)) {
-    ng_error ("Failed to create main game thread using pthread.");
+    ng_error ("Failed to create main game thread using pthread");
     return;
   }
 }
 
-void
-ng_game_loop () {
+void ng_game_loop () {
   ng_info ("Joining game context thread");
   pthread_join (ng_state->thread, NULL);
 }
 
-static void *
-ng_game_run_thread (void *dummy) {
+static void *ng_game_run_thread (void *dummy) {
   char *argv[] = { "cginz", NULL };
   int argc = 1;
   glutInit (&argc, argv);
@@ -53,36 +38,42 @@ ng_game_run_thread (void *dummy) {
   );
   glutCreateWindow (ng_state->config.window_title);
   glutDisplayFunc (ng_game_draw);
-  glutMainLoop ();
+  ng_game_run_game_loop ();
+  return NULL;
 }
 
-static void
-ng_game_draw () {
+static void ng_game_run_game_loop () {
+  for (;;) {
+    ng_game_run_game_loop_iteration ();
+    glutMainLoopEvent ();
+  }
+}
+
+static void ng_game_run_game_loop_iteration () {
+  ng_game_update ();
+}
+
+static void ng_game_draw () {
   ng_list_foreach (ng_actions_draw, ng_game_draw_node);
   glFlush ();
 }
 
-static void
-ng_game_draw_node (struct ng_list_node *node) {
+static void ng_game_draw_node (struct ng_list_node *node) {
   node->func ();
 }
 
-static void
-ng_game_update () {
+static void ng_game_update () {
   ng_list_foreach (ng_actions_update, ng_game_update_node);
 }
 
-static void
-ng_game_update_node (struct ng_list_node *node) {
+static void ng_game_update_node (struct ng_list_node *node) {
   node->func ();
 }
 
-static void
-ng_game_add_update_hook (void (*func) ()) {
+static void ng_game_add_update_hook (void (*func) ()) {
   ng_list_append (ng_actions_update, func);
 }
 
-static void
-ng_game_add_draw_hook (void (*func) ()) {
+static void ng_game_add_draw_hook (void (*func) ()) {
   ng_list_append (ng_actions_draw, func);
 }

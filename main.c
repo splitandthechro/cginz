@@ -5,14 +5,14 @@ void draw_something ();
 int main ()
 {
   // Create the game configuration
-  struct ng_game_configuration config = {
+  GameConfiguration config = {
     /* width  */ 640,
     /* height */ 480,
     /* title  */ "cginz"
   };
 
   // Create the game state
-  struct ng_game_state *game = ng_game_create_state (config);
+  GameState *game = ng_game_create_state (config);
 
   // Run the game and enter the gameloop
   game->run ();
