@@ -3,18 +3,18 @@
 
 // Standard C stuff
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 // OpenGL stuff
 #include <GL/glew.h>
-#include <GL/gl.h>
 #include <GL/freeglut.h>
 
 // pthread
 #include <pthread.h>
 
 // Nginz stuff
-#include "ng_error.h"
+#include "ng_log.h"
 #include "ng_list.h"
 #include "ng_game.h"
 
