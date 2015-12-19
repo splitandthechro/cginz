@@ -5,6 +5,9 @@
 bin/
 bin/*
 
+# personal stuff
+CMakeLists.txt.user
+
 *~
 *.autosave
 *.a
@@ -71,7 +74,6 @@ Thumbs.db
 
 # Binaries
 # --------
-bin/
 *.dll
 *.exe
 
