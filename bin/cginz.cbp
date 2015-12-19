@@ -47,6 +47,7 @@
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/5.2.0/../../../../i686-w64-mingw32/include" />
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/5.2.0/include" />
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/5.2.0/include-fixed" />
+            <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/include" />
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/lib/gcc/../../i686-w64-mingw32/include/c++" />
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/lib/gcc/../../i686-w64-mingw32/include/c++/backward" />
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/lib/gcc/../../i686-w64-mingw32/include/c++/i686-w64-mingw32" />
@@ -68,6 +69,7 @@
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/5.2.0/../../../../i686-w64-mingw32/include" />
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/5.2.0/include" />
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/5.2.0/include-fixed" />
+            <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/include" />
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/lib/gcc/../../i686-w64-mingw32/include/c++" />
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/lib/gcc/../../i686-w64-mingw32/include/c++/backward" />
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/lib/gcc/../../i686-w64-mingw32/include/c++/i686-w64-mingw32" />
@@ -89,6 +91,7 @@
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/5.2.0/../../../../i686-w64-mingw32/include" />
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/5.2.0/include" />
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/5.2.0/include-fixed" />
+            <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/include" />
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/lib/gcc/../../i686-w64-mingw32/include/c++" />
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/lib/gcc/../../i686-w64-mingw32/include/c++/backward" />
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/lib/gcc/../../i686-w64-mingw32/include/c++/i686-w64-mingw32" />
@@ -110,6 +113,7 @@
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/5.2.0/../../../../i686-w64-mingw32/include" />
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/5.2.0/include" />
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/5.2.0/include-fixed" />
+            <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/include" />
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/lib/gcc/../../i686-w64-mingw32/include/c++" />
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/lib/gcc/../../i686-w64-mingw32/include/c++/backward" />
             <Add directory="C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/lib/gcc/../../i686-w64-mingw32/include/c++/i686-w64-mingw32" />
@@ -126,19 +130,19 @@
          <Option target="cginz"/>
          <Option target="cginz_test"/>
       </Unit>
-      <Unit filename="C:/Users/Splitty/Documents/GitHub/cginz/ng_error.c">
-         <Option target="cginz"/>
-         <Option target="cginz_test"/>
-      </Unit>
-      <Unit filename="C:/Users/Splitty/Documents/GitHub/cginz/ng_error.h">
-         <Option target="cginz"/>
-         <Option target="cginz_test"/>
-      </Unit>
       <Unit filename="C:/Users/Splitty/Documents/GitHub/cginz/ng_game.c">
          <Option target="cginz"/>
          <Option target="cginz_test"/>
       </Unit>
       <Unit filename="C:/Users/Splitty/Documents/GitHub/cginz/ng_game.h">
+         <Option target="cginz"/>
+         <Option target="cginz_test"/>
+      </Unit>
+      <Unit filename="C:/Users/Splitty/Documents/GitHub/cginz/ng_list.c">
+         <Option target="cginz"/>
+         <Option target="cginz_test"/>
+      </Unit>
+      <Unit filename="C:/Users/Splitty/Documents/GitHub/cginz/ng_list.h">
          <Option target="cginz"/>
          <Option target="cginz_test"/>
       </Unit>

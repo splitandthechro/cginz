@@ -1,6 +1,10 @@
 # This file is used to ignore files which are generated
 # ----------------------------------------------------------------------------
 
+# bin directory
+bin/
+bin/*
+
 *~
 *.autosave
 *.a
@@ -67,9 +71,10 @@ Thumbs.db
 
 # Binaries
 # --------
+bin/
 *.dll
 *.exe
 
 # Exclude essential binaries
-!libwinpthread-1.dll
-!freeglut.dll
+!deps/
+!deps/*.dll

@@ -1,1 +1,1 @@
- -lglu32 -lopengl32 -Wl,-Bstatic -lfreeglut -Wl,-Bdynamic -lpthread -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+ -lglu32 -lopengl32 "C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/bin/glew32.dll" -Wl,-Bstatic -lfreeglut -Wl,-Bdynamic -lpthread -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

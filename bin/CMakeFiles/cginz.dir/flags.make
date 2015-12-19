@@ -6,5 +6,5 @@ C_FLAGS =
 
 C_DEFINES = -Dcginz_EXPORTS
 
-C_INCLUDES = 
+C_INCLUDES = @CMakeFiles/cginz.dir/includes_C.rsp
 

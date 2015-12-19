@@ -184,6 +184,12 @@ CMAKE_STRIP:FILEPATH=C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Path to a file.
+GLEW_INCLUDE_DIR:PATH=C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/include
+
+//Path to a library.
+GLEW_LIBRARY:FILEPATH=C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/bin/glew32.dll
+
+//Path to a file.
 GLUT_INCLUDE_DIR:PATH=C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/include
 
 //Path to a library.
@@ -199,7 +205,7 @@ OPENGL_glu_LIBRARY:STRING=glu32
 cginz_BINARY_DIR:STATIC=C:/Users/Splitty/Documents/GitHub/cginz/bin
 
 //Dependencies for the target
-cginz_LIB_DEPENDS:STATIC=general;glu32;general;opengl32;general;C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/lib/libfreeglut.a;general;pthread;
+cginz_LIB_DEPENDS:STATIC=general;glu32;general;opengl32;general;C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/bin/glew32.dll;general;C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/lib/libfreeglut.a;general;pthread;
 
 //Value Computed by CMake
 cginz_SOURCE_DIR:STATIC=C:/Users/Splitty/Documents/GitHub/cginz
@@ -212,6 +218,12 @@ cginz_static_LIB_DEPENDS:STATIC=
 
 //The directory containing a CMake configuration file for freeglut.
 freeglut_DIR:PATH=freeglut_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for pthread.
+pthread_DIR:PATH=pthread_DIR-NOTFOUND
+
+//The directory containing a CMake configuration file for pthreads.
+pthreads_DIR:PATH=pthreads_DIR-NOTFOUND
 
 
 ########################
@@ -356,12 +368,18 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 CMAKE_STRIP-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding GLEW
+FIND_PACKAGE_MESSAGE_DETAILS_GLEW:INTERNAL=[C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/include][C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/bin/glew32.dll][v()]
 //Details about finding GLUT
 FIND_PACKAGE_MESSAGE_DETAILS_GLUT:INTERNAL=[C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/lib/libfreeglut.a][C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/include][v()]
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[opengl32][v()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//ADVANCED property for variable: GLEW_INCLUDE_DIR
+GLEW_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GLEW_LIBRARY
+GLEW_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GLUT_INCLUDE_DIR
 GLUT_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GLUT_glut_LIBRARY

@@ -57,6 +57,7 @@ include CMakeFiles/cginz.dir/progress.make
 include CMakeFiles/cginz.dir/flags.make
 
 CMakeFiles/cginz.dir/main.c.obj: CMakeFiles/cginz.dir/flags.make
+CMakeFiles/cginz.dir/main.c.obj: CMakeFiles/cginz.dir/includes_C.rsp
 CMakeFiles/cginz.dir/main.c.obj: ../main.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Splitty\Documents\GitHub\cginz\bin\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/cginz.dir/main.c.obj"
 	C:\PROGRA~2\MINGW-~1\I686-5~1.0-W\mingw32\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\cginz.dir\main.c.obj   -c C:\Users\Splitty\Documents\GitHub\cginz\main.c
@@ -80,33 +81,10 @@ CMakeFiles/cginz.dir/main.c.obj.provides: CMakeFiles/cginz.dir/main.c.obj.requir
 CMakeFiles/cginz.dir/main.c.obj.provides.build: CMakeFiles/cginz.dir/main.c.obj
 
 
-CMakeFiles/cginz.dir/ng_error.c.obj: CMakeFiles/cginz.dir/flags.make
-CMakeFiles/cginz.dir/ng_error.c.obj: ../ng_error.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Splitty\Documents\GitHub\cginz\bin\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/cginz.dir/ng_error.c.obj"
-	C:\PROGRA~2\MINGW-~1\I686-5~1.0-W\mingw32\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\cginz.dir\ng_error.c.obj   -c C:\Users\Splitty\Documents\GitHub\cginz\ng_error.c
-
-CMakeFiles/cginz.dir/ng_error.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cginz.dir/ng_error.c.i"
-	C:\PROGRA~2\MINGW-~1\I686-5~1.0-W\mingw32\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Splitty\Documents\GitHub\cginz\ng_error.c > CMakeFiles\cginz.dir\ng_error.c.i
-
-CMakeFiles/cginz.dir/ng_error.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cginz.dir/ng_error.c.s"
-	C:\PROGRA~2\MINGW-~1\I686-5~1.0-W\mingw32\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Splitty\Documents\GitHub\cginz\ng_error.c -o CMakeFiles\cginz.dir\ng_error.c.s
-
-CMakeFiles/cginz.dir/ng_error.c.obj.requires:
-
-.PHONY : CMakeFiles/cginz.dir/ng_error.c.obj.requires
-
-CMakeFiles/cginz.dir/ng_error.c.obj.provides: CMakeFiles/cginz.dir/ng_error.c.obj.requires
-	$(MAKE) -f CMakeFiles\cginz.dir\build.make CMakeFiles/cginz.dir/ng_error.c.obj.provides.build
-.PHONY : CMakeFiles/cginz.dir/ng_error.c.obj.provides
-
-CMakeFiles/cginz.dir/ng_error.c.obj.provides.build: CMakeFiles/cginz.dir/ng_error.c.obj
-
-
 CMakeFiles/cginz.dir/ng_game.c.obj: CMakeFiles/cginz.dir/flags.make
+CMakeFiles/cginz.dir/ng_game.c.obj: CMakeFiles/cginz.dir/includes_C.rsp
 CMakeFiles/cginz.dir/ng_game.c.obj: ../ng_game.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Splitty\Documents\GitHub\cginz\bin\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/cginz.dir/ng_game.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Splitty\Documents\GitHub\cginz\bin\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/cginz.dir/ng_game.c.obj"
 	C:\PROGRA~2\MINGW-~1\I686-5~1.0-W\mingw32\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\cginz.dir\ng_game.c.obj   -c C:\Users\Splitty\Documents\GitHub\cginz\ng_game.c
 
 CMakeFiles/cginz.dir/ng_game.c.i: cmake_force
@@ -128,19 +106,45 @@ CMakeFiles/cginz.dir/ng_game.c.obj.provides: CMakeFiles/cginz.dir/ng_game.c.obj.
 CMakeFiles/cginz.dir/ng_game.c.obj.provides.build: CMakeFiles/cginz.dir/ng_game.c.obj
 
 
+CMakeFiles/cginz.dir/ng_list.c.obj: CMakeFiles/cginz.dir/flags.make
+CMakeFiles/cginz.dir/ng_list.c.obj: CMakeFiles/cginz.dir/includes_C.rsp
+CMakeFiles/cginz.dir/ng_list.c.obj: ../ng_list.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Splitty\Documents\GitHub\cginz\bin\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/cginz.dir/ng_list.c.obj"
+	C:\PROGRA~2\MINGW-~1\I686-5~1.0-W\mingw32\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\cginz.dir\ng_list.c.obj   -c C:\Users\Splitty\Documents\GitHub\cginz\ng_list.c
+
+CMakeFiles/cginz.dir/ng_list.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/cginz.dir/ng_list.c.i"
+	C:\PROGRA~2\MINGW-~1\I686-5~1.0-W\mingw32\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Splitty\Documents\GitHub\cginz\ng_list.c > CMakeFiles\cginz.dir\ng_list.c.i
+
+CMakeFiles/cginz.dir/ng_list.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/cginz.dir/ng_list.c.s"
+	C:\PROGRA~2\MINGW-~1\I686-5~1.0-W\mingw32\bin\gcc.exe  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\Splitty\Documents\GitHub\cginz\ng_list.c -o CMakeFiles\cginz.dir\ng_list.c.s
+
+CMakeFiles/cginz.dir/ng_list.c.obj.requires:
+
+.PHONY : CMakeFiles/cginz.dir/ng_list.c.obj.requires
+
+CMakeFiles/cginz.dir/ng_list.c.obj.provides: CMakeFiles/cginz.dir/ng_list.c.obj.requires
+	$(MAKE) -f CMakeFiles\cginz.dir\build.make CMakeFiles/cginz.dir/ng_list.c.obj.provides.build
+.PHONY : CMakeFiles/cginz.dir/ng_list.c.obj.provides
+
+CMakeFiles/cginz.dir/ng_list.c.obj.provides.build: CMakeFiles/cginz.dir/ng_list.c.obj
+
+
 # Object files for target cginz
 cginz_OBJECTS = \
 "CMakeFiles/cginz.dir/main.c.obj" \
-"CMakeFiles/cginz.dir/ng_error.c.obj" \
-"CMakeFiles/cginz.dir/ng_game.c.obj"
+"CMakeFiles/cginz.dir/ng_game.c.obj" \
+"CMakeFiles/cginz.dir/ng_list.c.obj"
 
 # External object files for target cginz
 cginz_EXTERNAL_OBJECTS =
 
 libcginz.dll: CMakeFiles/cginz.dir/main.c.obj
-libcginz.dll: CMakeFiles/cginz.dir/ng_error.c.obj
 libcginz.dll: CMakeFiles/cginz.dir/ng_game.c.obj
+libcginz.dll: CMakeFiles/cginz.dir/ng_list.c.obj
 libcginz.dll: CMakeFiles/cginz.dir/build.make
+libcginz.dll: C:/Program\ Files\ (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/bin/glew32.dll
 libcginz.dll: C:/Program\ Files\ (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/lib/libfreeglut.a
 libcginz.dll: CMakeFiles/cginz.dir/linklibs.rsp
 libcginz.dll: CMakeFiles/cginz.dir/objects1.rsp
@@ -154,8 +158,8 @@ CMakeFiles/cginz.dir/build: libcginz.dll
 .PHONY : CMakeFiles/cginz.dir/build
 
 CMakeFiles/cginz.dir/requires: CMakeFiles/cginz.dir/main.c.obj.requires
-CMakeFiles/cginz.dir/requires: CMakeFiles/cginz.dir/ng_error.c.obj.requires
 CMakeFiles/cginz.dir/requires: CMakeFiles/cginz.dir/ng_game.c.obj.requires
+CMakeFiles/cginz.dir/requires: CMakeFiles/cginz.dir/ng_list.c.obj.requires
 
 .PHONY : CMakeFiles/cginz.dir/requires
 

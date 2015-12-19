@@ -6,6 +6,7 @@
 #include <string.h>
 
 // OpenGL stuff
+#include <GL/glew.h>
 #include <GL/gl.h>
 #include <GL/freeglut.h>
 
@@ -14,6 +15,7 @@
 
 // Nginz stuff
 #include "ng_error.h"
+#include "ng_list.h"
 #include "ng_game.h"
 
 #endif // ng_forward_h

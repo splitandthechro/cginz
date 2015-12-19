@@ -5,12 +5,14 @@
 #include "ng_forward.h"
 #endif // ng_forward_h
 
+// Game configuration
 struct ng_game_configuration {
   int window_width;
   int window_height;
   const char *window_title;
 };
 
+// Game state
 struct ng_game_state {
   struct ng_game_configuration config;
   void (*run) ();

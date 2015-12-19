@@ -6,11 +6,55 @@
 
 #IncludeRegexTransform: 
 
+C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/include/GL/freeglut.h
+freeglut_std.h
+C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/include/GL/freeglut_std.h
+freeglut_ext.h
+C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/include/GL/freeglut_ext.h
+
+C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/include/GL/freeglut_ext.h
+stdarg.h
+-
+
+C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/include/GL/freeglut_std.h
+windows.h
+-
+EGL/egl.h
+-
+GLES/gl.h
+-
+GLES2/gl2.h
+-
+OpenGL/gl.h
+-
+OpenGL/glu.h
+-
+GL/gl.h
+-
+GL/glu.h
+-
+stdlib.h
+-
+
+C:/Program Files (x86)/mingw-w64/i686-5.2.0-win32-dwarf-rt_v4-rev0/mingw32/include/GL/glew.h
+stddef.h
+-
+inttypes.h
+-
+stdint.h
+-
+inttypes.h
+-
+Availability.h
+-
+OpenGL/glu.h
+-
+GL/glu.h
+-
+
 C:/Users/Splitty/Documents/GitHub/cginz/main.c
 ng_forward.h
 C:/Users/Splitty/Documents/GitHub/cginz/ng_forward.h
-
-C:/Users/Splitty/Documents/GitHub/cginz/ng_error.c
 
 C:/Users/Splitty/Documents/GitHub/cginz/ng_error.h
 ng_forward.h
@@ -21,6 +65,8 @@ stdio.h
 -
 string.h
 -
+GL/glew.h
+-
 GL/gl.h
 -
 GL/freeglut.h
@@ -29,6 +75,8 @@ pthread.h
 -
 ng_error.h
 C:/Users/Splitty/Documents/GitHub/cginz/ng_error.h
+ng_list.h
+C:/Users/Splitty/Documents/GitHub/cginz/ng_list.h
 ng_game.h
 C:/Users/Splitty/Documents/GitHub/cginz/ng_game.h
 
@@ -37,6 +85,14 @@ ng_game.h
 C:/Users/Splitty/Documents/GitHub/cginz/ng_game.h
 
 C:/Users/Splitty/Documents/GitHub/cginz/ng_game.h
+ng_forward.h
+C:/Users/Splitty/Documents/GitHub/cginz/ng_forward.h
+
+C:/Users/Splitty/Documents/GitHub/cginz/ng_list.c
+ng_list.h
+C:/Users/Splitty/Documents/GitHub/cginz/ng_list.h
+
+C:/Users/Splitty/Documents/GitHub/cginz/ng_list.h
 ng_forward.h
 C:/Users/Splitty/Documents/GitHub/cginz/ng_forward.h
 

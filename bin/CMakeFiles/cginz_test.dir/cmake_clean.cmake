@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/cginz_test.dir/main.c.obj"
-  "CMakeFiles/cginz_test.dir/ng_error.c.obj"
   "CMakeFiles/cginz_test.dir/ng_game.c.obj"
+  "CMakeFiles/cginz_test.dir/ng_list.c.obj"
   "cginz_test.pdb"
   "cginz_test.exe"
   "cginz_test.exe.manifest"
