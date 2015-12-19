@@ -1,14 +1,17 @@
 #include "ng_forward.h"
 
+void update_something ();
 void draw_something ();
 
 int main ()
 {
   // Create the game configuration
   GameConfiguration config = {
-    /* width  */ 640,
-    /* height */ 480,
-    /* title  */ "cginz"
+    /* width            */ 640,
+    /* height           */ 480,
+    /* target framerate */ 5,
+    /* fixed framerate  */ 1,
+    /* title            */ "cginz"
   };
 
   // Create the game state
@@ -16,6 +19,7 @@ int main ()
 
   // Run the game and enter the gameloop
   game->run ();
+  game->add_update_hook (update_something);
   game->add_draw_hook (draw_something);
   game->loop ();
 
@@ -23,7 +27,11 @@ int main ()
   return EXIT_SUCCESS;
 }
 
-void draw_something () {
+void update_something (GameTime *time) {
+  printf ("Elapsed: %02.2f\r\n", time->elapsed);
+}
+
+void draw_something (GameTime *time) {
   glClearColor (0.0f, 0.4f, 1.0f, 1.0f);
   glClear (GL_COLOR_BUFFER_BIT);
 }

@@ -4,27 +4,12 @@
 #ifndef ng_forward_h
 #include <GL/glew.h>
 #include <GL/freeglut.h>
+#include <time.h>
 #include <pthread.h>
 #include "ng_log.h"
+#include "ng_types.h"
 #include "ng_list.h"
 #endif // ng_forward_h
-
-//region structs
-typedef struct ng_game_configuration {
-  int window_width;
-  int window_height;
-  const char *window_title;
-} GameConfiguration;
-
-typedef struct ng_game_state {
-  GameConfiguration config;
-  void (*run) ();
-  void (*loop) ();
-  void (*add_update_hook) (void (*) ());
-  void (*add_draw_hook) (void (*) ());
-  pthread_t thread;
-} GameState;
-//endregion;
 
 //region functions
 GameState *ng_game_create_state (GameConfiguration config);
@@ -47,8 +32,8 @@ static void ng_game_update ();
 static void ng_game_update_node (struct ng_list_node *);
 static void ng_game_draw ();
 static void ng_game_draw_node (struct ng_list_node *);
-static void ng_game_add_update_hook (void (*) (void *));
-static void ng_game_add_draw_hook (void (*) (void *));
+static void ng_game_add_update_hook (ng_list_iterator *);
+static void ng_game_add_draw_hook (ng_list_iterator *);
 static void ng_game_run_game_loop ();
 static void ng_game_run_game_loop_iteration ();
 //endregion;

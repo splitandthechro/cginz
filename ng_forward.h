@@ -15,6 +15,7 @@
 
 // Nginz stuff
 #include "ng_log.h"
+#include "ng_types.h"
 #include "ng_list.h"
 #include "ng_game.h"
 

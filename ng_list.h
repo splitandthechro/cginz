@@ -5,11 +5,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "ng_log.h"
+#include "ng_types.h"
 #endif // ng_forward_h
+
+typedef void ng_list_iterator (GameTime *time);
 
 // List node
 struct ng_list_node {
-  void (*func) ();
+  ng_list_iterator *func;
   struct ng_list_node *next;
 };
 
@@ -30,7 +33,7 @@ void
 ng_list_free (struct ng_list *);
 
 void
-ng_list_append (struct ng_list *, void (*) ());
+ng_list_append (struct ng_list *, ng_list_iterator *);
 
 void
 ng_list_foreach (struct ng_list *, void (*) (struct ng_list_node *));

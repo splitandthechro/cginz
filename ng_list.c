@@ -24,7 +24,7 @@ ng_list_free (struct ng_list *list) {
 }
 
 void
-ng_list_append (struct ng_list *list, void (*func) (void *)) {
+ng_list_append (struct ng_list *list, ng_list_iterator *func) {
   struct ng_list_node *node = malloc (sizeof (struct ng_list_node));
   node->func = func;
   node->next = NULL;
