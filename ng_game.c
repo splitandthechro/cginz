@@ -1,16 +1,14 @@
 #include "ng_game.h"
 
 GameState *ng_game_create_state (GameConfiguration config) {
-  GameTime *init_game_time = malloc (sizeof (GameTime));
-  GameTimeState *init_game_time_state = malloc (sizeof (GameTimeState));
+  GameTime *init_time = malloc (sizeof (GameTime));
   ng_state = malloc (sizeof (GameState));
   ng_state->config = config;
   ng_state->run = &ng_game_run;
   ng_state->loop = &ng_game_loop;
   ng_state->add_update_hook = &ng_game_add_update_hook;
   ng_state->add_draw_hook = &ng_game_add_draw_hook;
-  ng_state->time = init_game_time;
-  ng_state->timestate = init_game_time_state;
+  ng_state->time = init_time;
   return ng_state;
 }
 
@@ -45,14 +43,11 @@ static void *ng_game_run_thread (void *dummy) {
 
 static void ng_game_run_game_loop () {
   int start_time = glutGet (GLUT_ELAPSED_TIME);
-  ng_state->timestate->time_game_last = 0;
-  ng_state->timestate->time_game_current = 0;
-  ng_state->timestate->time_update = .0f;
-  ng_state->timestate->time_update_accum = .0f;
-  ng_state->timestate->time_update_delta =
-      1.0f / ng_state->config.framerate_target;
-  ng_state->timestate->time_update_current =
-      ng_state->timestate->time_game_current / 1000.0f;
+  ng_t = 0.0f;
+  ng_dt = 1.0f / ng_state->config.framerate_target;
+  ng_current_time = start_time / 1000.0f;
+  ng_accum = 0.0f;
+  ng_last_time = 0.0f;
   for (;;) {
     ng_game_run_game_loop_iteration ();
     glutMainLoopEvent ();
@@ -61,43 +56,36 @@ static void ng_game_run_game_loop () {
 
 static void ng_game_run_game_loop_iteration () {
 
-  // Get the total elapsed time in milliseconds
-  float time_now = glutGet (GLUT_ELAPSED_TIME);
-  ng_state->timestate->time_game_current = time_now;
+  // Calculate timing data
+  double new_time = glutGet (GLUT_ELAPSED_TIME) / 1000.0f;
+  double frame_time = new_time - ng_current_time;
+  ng_current_time = new_time;
+  ng_accum += frame_time;
 
   // Fixed framerate update
   if (ng_state->config.framerate_fixed) {
 
-    // Calculate timing data
-    float time_new = time_now / 1000.0f;
-    ng_state->timestate->time_update_frame =
-        time_new - ng_state->timestate->time_update_current;
-    ng_state->timestate->time_update_current = time_new;
-    ng_state->timestate->time_update_accum +=
-        ng_state->timestate->time_update_frame;
-
     // Update according to calculated timing data
-    while (ng_state->timestate->time_update_accum
-           >= ng_state->timestate->time_update_delta) {
+    while (ng_accum >= ng_dt) {
 
       // Calculate total and elapsed time
-      int time_total = time_now;
-      int time_elapsed = time_now - ng_state->timestate->time_game_last;
-      ng_state->timestate->time_game_last = time_now;
+      double new_total_time = glutGet (GLUT_ELAPSED_TIME);
+      double total_time = new_total_time;
+      double elapsed_time = new_total_time - ng_last_time;
+      ng_last_time = new_total_time;
 
       // Update game time
-      ng_state->time->total = time_total;
-      ng_state->time->elapsed = time_elapsed;
-      printf ("|Elapsed: %f\r\n", time_elapsed);
+      ng_state->time->total = total_time;
+      ng_state->time->total_seconds = total_time / 1000.0f;
+      ng_state->time->elapsed = elapsed_time;
+      ng_state->time->elapsed_seconds = elapsed_time / 1000.0f;
 
       // Update game
       ng_game_update ();
 
       // Update timing data
-      ng_state->timestate->time_update_accum -=
-          ng_state->timestate->time_update_delta;
-      ng_state->timestate->time_update +=
-          ng_state->timestate->time_update_delta;
+      ng_accum -= ng_dt;
+      ng_t += ng_dt;
     }
   }
 
@@ -105,13 +93,16 @@ static void ng_game_run_game_loop_iteration () {
   else {
 
     // Calculate total and elapsed time
-    int time_total = time_now;
-    int time_elapsed = time_now - ng_state->timestate->time_game_last;
-    ng_state->timestate->time_game_last = time_now;
+    double new_total_time = glutGet (GLUT_ELAPSED_TIME);
+    double total_time = new_total_time;
+    double elapsed_time = new_total_time - ng_last_time;
+    ng_last_time = new_total_time;
 
     // Update game time
-    ng_state->time->total = time_total;
-    ng_state->time->elapsed = time_elapsed;
+    ng_state->time->total = total_time;
+    ng_state->time->total_seconds = total_time / 1000.0f;
+    ng_state->time->elapsed = elapsed_time;
+    ng_state->time->elapsed_seconds = elapsed_time / 1000.0f;
 
     // Update game
     ng_game_update ();

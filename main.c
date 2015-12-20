@@ -9,7 +9,7 @@ int main ()
   GameConfiguration config = {
     /* width            */ 640,
     /* height           */ 480,
-    /* target framerate */ 5,
+    /* target framerate */ 60,
     /* fixed framerate  */ 1,
     /* title            */ "cginz"
   };
@@ -28,7 +28,8 @@ int main ()
 }
 
 void update_something (GameTime *time) {
-  printf ("Elapsed: %02.2f\r\n", time->elapsed);
+  printf ("Total: %f  Elapsed: %f\r\n",
+          time->total, time->elapsed);
 }
 
 void draw_something (GameTime *time) {

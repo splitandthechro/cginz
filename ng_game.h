@@ -24,6 +24,11 @@ ng_game_loop ();
 static GameState *ng_state;
 static struct ng_list *ng_actions_update;
 static struct ng_list *ng_actions_draw;
+static double ng_t;
+static double ng_dt;
+static double ng_current_time;
+static double ng_last_time;
+static double ng_accum;
 //endregion;
 
 //region static functions

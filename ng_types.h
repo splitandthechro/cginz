@@ -15,19 +15,11 @@ typedef struct ng_game_configuration {
 } GameConfiguration;
 
 typedef struct ng_game_time {
-  time_t total;
-  time_t elapsed;
+  double total;
+  double total_seconds;
+  double elapsed;
+  double elapsed_seconds;
 } GameTime;
-
-typedef struct ng_game_time_state {
-  int time_game_last;
-  int time_game_current;
-  float time_update;
-  float time_update_delta;
-  float time_update_frame;
-  float time_update_accum;
-  float time_update_current;
-} GameTimeState;
 
 typedef struct ng_game_state {
   GameConfiguration config;
@@ -36,7 +28,6 @@ typedef struct ng_game_state {
   void (*add_update_hook) (void (*) ());
   void (*add_draw_hook) (void (*) ());
   pthread_t thread;
-  GameTimeState *timestate;
   GameTime *time;
 } GameState;
 //endregion;
